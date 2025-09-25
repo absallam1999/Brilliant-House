@@ -1,0 +1,469 @@
+/* ==========================
+   Theme Global Styling
+   ========================== */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Core HTML/Body defaults */
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-size: 16px;
+  line-height: var(--line-height-normal);
+  min-height: 100%;
+}
+
+body {
+  min-height: 100vh;
+  min-height: 100dvh;
+  width: 100%;
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  font-weight: var(--font-normal);
+  overflow-x: hidden;
+  transition: background-color var(--transition-base),
+    color var(--transition-base);
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
+  overflow-wrap: break-word;
+}
+
+/* Focus management */
+:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* Media handling */
+img,
+svg,
+video,
+canvas,
+picture {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* SVG inheritance */
+svg {
+  shape-rendering: geometricPrecision;
+}
+
+/* Lists */
+ul,
+ol {
+  padding-left: var(--spacing-xl);
+  margin: var(--spacing-md) 0;
+}
+
+li {
+  margin-bottom: var(--spacing-xs);
+  line-height: var(--line-height-relaxed);
+  cursor: pointer;
+}
+
+/* Links (don’t force inherit color so Tailwind works) */
+a {
+  text-decoration: none;
+  transition: color var(--transition-base), opacity var(--transition-base);
+  cursor: pointer;
+}
+
+a:hover {
+  opacity: 0.9;
+}
+
+a:active {
+  opacity: 0.8;
+  transform: translateY(1px);
+}
+
+/* Tables */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: var(--spacing-lg) 0;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+
+th,
+td {
+  padding: var(--spacing-md);
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+}
+
+th {
+  background-color: var(--muted);
+  font-weight: var(--font-semibold);
+  color: var(--foreground);
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+/* Text selection */
+::selection {
+  background-color: var(--primary);
+  color: var(--primary-foreground);
+}
+
+::-moz-selection {
+  background-color: var(--primary);
+  color: var(--primary-foreground);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+  border-radius: var(--radius-full);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--primary);
+  border-radius: var(--radius-full);
+  border: 3px solid var(--background);
+  background-clip: padding-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--primary-dark);
+}
+
+::-webkit-scrollbar-corner {
+  background: var(--background);
+}
+
+/* Form elements */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  border-radius: var(--radius);
+  transition: all var(--transition-base);
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* Focus states for inputs */
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+  border-radius: var(--radius);
+}
+
+/* Placeholder */
+::placeholder {
+  color: var(--muted-foreground);
+  opacity: 1;
+}
+
+/* Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: var(--font-semibold);
+  line-height: var(--line-height-tight);
+  margin: var(--spacing-md) 0;
+  color: var(--foreground);
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: var(--font-bold);
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1.25rem;
+}
+
+h5 {
+  font-size: 1.125rem;
+}
+
+h6 {
+  font-size: 1rem;
+}
+
+p {
+  margin: var(--spacing-md) 0;
+  line-height: var(--line-height-relaxed);
+}
+
+/* Code blocks */
+code,
+pre {
+  font-family: var(--font-mono);
+  background-color: var(--muted);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--radius);
+  font-size: 0.875em;
+}
+
+pre {
+  padding: var(--spacing-md);
+  overflow-x: auto;
+  margin: var(--spacing-md) 0;
+}
+
+/* Blockquote */
+blockquote {
+  border-left: 4px solid var(--primary);
+  padding-left: var(--spacing-md);
+  margin: var(--spacing-lg) 0;
+  font-style: italic;
+  color: var(--muted-foreground);
+}
+
+/* Horizontal rule */
+hr {
+  border: none;
+  height: 1px;
+  background-color: var(--border);
+  margin: var(--spacing-xl) 0;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+  :root {
+    --border: #000000;
+  }
+
+  .dark {
+    --border: #ffffff;
+  }
+
+  a {
+    text-decoration: underline;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  html {
+    font-size: 15px;
+  }
+
+  button,
+  a {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  table {
+    font-size: 0.875rem;
+  }
+
+  th,
+  td {
+    padding: var(--spacing-sm);
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 14px;
+  }
+
+  table {
+    display: block;
+    overflow-x: auto;
+  }
+}
+
+/* Print */
+@media print {
+  * {
+    background: transparent !important;
+    color: black !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  body {
+    font-size: 12pt;
+    line-height: 1.5;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  a[href^="#"]:after,
+  a[href^="javascript:"]:after {
+    content: "";
+  }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  thead {
+    display: table-header-group;
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  img {
+    max-width: 100% !important;
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
+
+/* Dark mode */
+.dark {
+  background-color: var(--background);
+  color: var(--foreground);
+}
+
+.dark img {
+  filter: brightness(0.9) contrast(1.1);
+}
+
+/* Utilities */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+/* Smooth theme transitions */
+.theme-transition * {
+  transition: background-color var(--transition-slow),
+    color var(--transition-slow), border-color var(--transition-slow),
+    fill var(--transition-slow);
+}
+
+/* Focus ring */
+.focus-ring:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+  border-radius: var(--radius);
+}
+
+/* Gradient text utility */
+.gradient-text {
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Glass effect */
+.glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dark .glass {
+  background: rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Parallax background */
+.parallax-bg {
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@media (max-width: 768px) {
+  .parallax-bg {
+    background-attachment: scroll;
+    background-position: center;
+    background-size: cover;
+  }
+}

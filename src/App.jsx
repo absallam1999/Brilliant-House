@@ -6,8 +6,8 @@ import {
   Route,
   Navigate,
 } from "react-router-dom";
-import Layout from "./components/Layout";
 import Home from "./pages/Home/index.jsx";
+import Layout from "./components/Layout/index.jsx";
 import About from "./pages/About/index.jsx";
 import Services from "./pages/Services/index.jsx";
 import Team from "./pages/Team/index.jsx";
@@ -27,11 +27,11 @@ import Blog from './pages/Admin/Pages/Blog.jsx';
 import Projects from './pages/Admin/Pages/Projects.jsx';
 import Settings from './pages/Admin/Pages/Settings.jsx';
 
-import Residential from "./Pages/Services/Residential.jsx";
-import Commercial from "./Pages/Services/Commercial.jsx";
-import Management from "./Pages/Services/Management.jsx";
-import Renovation from "./Pages/Services/Renovation.jsx";
-import ProtectedRoute from "./components/ProtectedRoute.jsx";
+import Residential from "./Pages/Services/Residential/index.jsx";
+import Commercial from "./Pages/Services/Commercial/index.jsx";
+import Management from "./Pages/Services/Management/index.jsx";
+import Renovation from "./Pages/Services/Renovation/index.jsx";
+import ProtectedRoute from "./components/ProtectedRoute/index.jsx";
 import "./App.css";
 
 // Authentication check functions

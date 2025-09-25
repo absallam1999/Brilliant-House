@@ -1,7 +1,7 @@
 import React from "react";
 import { Award, Clock, Users, Building, ChevronRight } from "lucide-react";
 import { Button } from "../../../components/ui/button";
-import AboutLogo from "../../../assets/about-logo.jpg";
+import AboutLogo from "../../../assets/about-Img.jpg";
 
 export default function AboutSection() {
   const features = [

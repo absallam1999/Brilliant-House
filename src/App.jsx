@@ -93,7 +93,7 @@ const router = createBrowserRouter(
         path="legacy-admin"
         element={
           <ProtectedRoute isAuthenticated={isUserAuthenticated} redirectPath="/">
-            <Admin />
+            <Dashboard />
           </ProtectedRoute>
         }
       />

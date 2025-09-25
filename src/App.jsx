@@ -7,32 +7,31 @@ import {
   Navigate,
 } from "react-router-dom";
 import Layout from "./components/Layout";
-import Home from "./pages/Home";
-import About from "./pages/About";
-import Services from "./pages/Services";
-import Team from "./pages/Team";
-import Pricing from "./pages/Pricing";
-import Contact from "./pages/Contact";
-import Payment from "./pages/Payment";
-import Portfolio from "./pages/Portfolio";
-import Project from "./Pages/Project";
-import Quote from "./pages/Quote";
-import Admin from "./pages/Admin";
-import ErrorPage from "./pages/404";
+import Home from "./pages/Home/index.jsx";
+import About from "./pages/About/index.jsx";
+import Services from "./pages/Services/index.jsx";
+import Team from "./pages/Team/index.jsx";
+import Pricing from "./pages/Pricing/index.jsx";
+import Contact from "./pages/Contact/index.jsx";
+import Payment from "./pages/Payment/index.jsx";
+import Portfolio from "./pages/Portfolio/index.jsx";
+import Project from "./Pages/Project/index.jsx";
+import Quote from "./pages/Quote/index.jsx";
+import ErrorPage from "./pages/404/index.jsx";
 
-import Dashboard from './pages/admin';
-import DashboardLayout from './pages/Admin/DashboardLayout';
-import AdminLogin from './pages/Admin/AdminLogin';
-import Payments from './pages/Admin/Pages/Payments';
-import Blog from './pages/Admin/Pages/Blog';
-import Projects from './pages/Admin/Pages/Projects';
-import Settings from './pages/Admin/Pages/Settings';
+import Dashboard from './pages/admin/index.jsx';
+import DashboardLayout from './pages/Admin/DashboardLayout.jsx';
+import AdminLogin from './pages/Admin/AdminLogin.jsx';
+import Payments from './pages/Admin/Pages/Payments.jsx';
+import Blog from './pages/Admin/Pages/Blog.jsx';
+import Projects from './pages/Admin/Pages/Projects.jsx';
+import Settings from './pages/Admin/Pages/Settings.jsx';
 
-import Residential from "./Pages/Services/Residential";
-import Commercial from "./Pages/Services/Commercial";
-import Management from "./Pages/Services/Management";
-import Renovation from "./Pages/Services/Renovation";
-import ProtectedRoute from "./components/ProtectedRoute";
+import Residential from "./Pages/Services/Residential.jsx";
+import Commercial from "./Pages/Services/Commercial.jsx";
+import Management from "./Pages/Services/Management.jsx";
+import Renovation from "./Pages/Services/Renovation.jsx";
+import ProtectedRoute from "./components/ProtectedRoute.jsx";
 import "./App.css";
 
 // Authentication check functions

@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "title": "Modern Luxury Villa",
+    "category": "residential",
+    "image": "/api/placeholder/600/400",
+    "location": "Beverly Hills, CA",
+    "date": "2023",
+    "description": "A stunning contemporary villa with panoramic views, featuring sustainable materials and smart home technology.",
+    "features": ["Smart Home", "Sustainable", "360° Views", "Pool"]
+  },
+  {
+    "id": 2,
+    "title": "Corporate Headquarters",
+    "category": "commercial",
+    "image": "/api/placeholder/600/400",
+    "location": "New York, NY",
+    "date": "2023",
+    "description": "A state-of-the-art office building designed for collaboration and innovation with biophilic design elements.",
+    "features": ["Biophilic Design", "Collaborative Spaces", "LEED Certified", "Rooftop Garden"]
+  },
+  {
+    "id": 3,
+    "title": "Historic Building Restoration",
+    "category": "renovation",
+    "image": "/api/placeholder/600/400",
+    "location": "Boston, MA",
+    "date": "2022",
+    "description": "Careful restoration of a 19th-century landmark building preserving historical elements while adding modern comforts.",
+    "features": ["Historical Preservation", "Modern Amenities", "Period Details", "Adaptive Reuse"]
+  },
+  {
+    "id": 4,
+    "title": "Coastal Retreat",
+    "category": "residential",
+    "image": "/api/placeholder/600/400",
+    "location": "Malibu, CA",
+    "date": "2022",
+    "description": "A beachfront property designed to maximize ocean views while providing privacy and luxury amenities.",
+    "features": ["Oceanfront", "Infinity Pool", "Open Layout", "Natural Materials"]
+  },
+  {
+    "id": 5,
+    "title": "Shopping Mall Expansion",
+    "category": "commercial",
+    "image": "/api/placeholder/600/400",
+    "location": "Chicago, IL",
+    "date": "2022",
+    "description": "Expansion and modernization of a regional shopping center with new retail spaces and dining options.",
+    "features": ["Retail Spaces", "Food Court", "Parking Structure", "Landscaping"]
+  },
+  {
+    "id": 6,
+    "title": "Urban Loft Conversion",
+    "category": "renovation",
+    "image": "/api/placeholder/600/400",
+    "location": "San Francisco, CA",
+    "date": "2021",
+    "description": "Transformation of an industrial warehouse into modern loft apartments with exposed elements and high ceilings.",
+    "features": ["Industrial Design", "Open Concept", "Exposed Elements", "High Ceilings"]
+  }
+]
